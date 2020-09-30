@@ -19,9 +19,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         txttitulo = findViewById(R.id.txttitulo);
         btnproductos = findViewById(R.id.btnproductos);
+        btnlistado = findViewById(R.id.btnlistado);
+
         btnproductos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,8 +32,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        btnlistado = findViewById(R.id.btnlistado);
+
+        btnlistado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intento = new Intent(MainActivity.this,ListaRegistro.class);
+                startActivity(intento);
 
 
+            }
+        });
     }
 }
